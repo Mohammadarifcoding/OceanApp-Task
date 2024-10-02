@@ -1,3 +1,4 @@
+import Container from "@/Components/Shared/Container/Container";
 import ProfileDetails from "./ProfileDetails";
 import ProfileInfo from "./ProfileInfo";
 
@@ -16,11 +17,13 @@ const User = () => {
     dateOfBirth:"2005-05-15T00:00:00.000Z"
 };
   return (
-    <div className="mx-12 my-20">
+    <Container>
       <ProfileInfo data={userData}/>
       {/* form */}
       <ProfileDetails data={userData} />
-    </div>
+    </Container>
+
+    
   );
 };
 

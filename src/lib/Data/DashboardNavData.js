@@ -1,9 +1,9 @@
 
-import { FaShoppingBag, FaTachometerAlt } from 'react-icons/fa';
+import {  FaTachometerAlt } from 'react-icons/fa';
 import { IoMdNotifications } from 'react-icons/io';
 import {  MdLibraryBooks } from 'react-icons/md';
 import {  PiUserFill } from 'react-icons/pi';
-
+import { PiStudentBold } from "react-icons/pi";
 export const DashboardData = [
   {
     title: 'General',
@@ -14,21 +14,16 @@ export const DashboardData = [
         icon: FaTachometerAlt
       },
       {
-        route: '/orders',
-        title: 'Orders',
-        icon: FaShoppingBag,
-        underRoutes: true,
-        underRoutesData: [
-          {
-            route: '/web-development',
-            title: 'Web Development'
-          },
-          {
-            route: '/web-development',
-            title: 'Web Development'
-          }
-        ]
-      }
+        route: '/student-portal',
+        title: 'Student Portal',
+        icon:  PiStudentBold,
+
+      },
+      {
+        route: '/profile',
+        title: 'User',
+        icon: PiUserFill
+      },
     ]
   },
   {
