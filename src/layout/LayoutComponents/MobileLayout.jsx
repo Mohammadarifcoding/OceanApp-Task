@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Drawer from "react-modern-drawer";
-// import logo from "../../../assets/logo/newLogo.png";
+import logo from "/logo/logo.png"
 import "react-modern-drawer/dist/index.css";
 import { IoIosMenu } from "react-icons/io";
 import { Link } from "react-router-dom";
@@ -19,9 +19,10 @@ const MobileLayout = () => {
     <>
       <div className=" w-full px-3 py-3  lg:hidden">
         <div className="flex items-center justify-between">
-          {/* <Link href="/" className="cursor-pointer mr-6">
-            <img className="w-[100px]" src={logo} alt="logo" />{' '}
-          </Link> */}
+        <Link to="/" className="flex gap-2 items-center cursor-pointer">
+            <img src={logo} className=" max-w-[40px]" alt="Logo" />
+            <h2 className="text-xl font-semibold text-primary">Ed Learn</h2>
+          </Link>
 
           <button
             onClick={toggleDrawer}

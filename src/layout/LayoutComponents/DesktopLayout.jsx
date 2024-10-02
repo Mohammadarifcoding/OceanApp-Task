@@ -1,8 +1,9 @@
 
 import { Link } from "react-router-dom";
 // import logo from "../../../assets/logo/newLogo.png";
-import LayoutBar from "./LayoutBar";
 import { DashboardData } from "../../lib/Data/DashboardNavData";
+import LayoutBar from "./LayoutBar";
+import logo from "/logo/logo.png";
 
 const DesktopLayout = () => {
   // for notification
@@ -12,11 +13,12 @@ const DesktopLayout = () => {
     <div className="sticky top-0 hidden h-[100vh] w-full flex-col justify-between border-r bg-white py-10 drop-shadow-sm lg:flex">
       <div className="pl-7">
         <div>
-          <Link to="/">
-            {/* <img src={logo} className="mr-auto max-w-[200px]" alt="Logo" /> */}
+          <Link to="/" className="flex gap-2 items-center cursor-pointer">
+            <img src={logo} className=" max-w-[40px]" alt="Logo" />
+            <h2 className="text-xl font-semibold text-primary">Ed Learn</h2>
           </Link>
         </div>
-        <div className="mt-4 flex flex-col">
+        <div className="mt-10 flex flex-col">
           {DashboardData.map((navItem, key) => (
             <div className="mb-5 flex flex-col gap-2" key={key}>
               <h3 className="text-[13px] font-medium text-[#637381]">
