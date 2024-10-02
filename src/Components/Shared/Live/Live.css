@@ -1,0 +1,26 @@
+/* Live.css */
+
+/* Hides chat window by default on larger screens and shows it on smaller screens */
+.chat-window {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .chat-window {
+      display: block; /* Shows the chat window on mobile devices */
+    }
+  }
+  
+  /* Adjust styles for different screen sizes */
+  .chat-header,
+  .chat-messages,
+  .chat-input {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .chat-button {
+    width: 100%;
+    max-width: 100%;
+  }
+  
