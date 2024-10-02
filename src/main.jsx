@@ -3,25 +3,10 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 
 import {
-  createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Layout from './Components/Layout/Layout';
-import Home from './Components/Pages/Home/Home';
+import { router } from './Router/Router';
 
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout></Layout>,
-    children:[
-      {
-        path:'/',
-        element:<Home></Home>
-      },
-    ]
-  },
-]);
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
