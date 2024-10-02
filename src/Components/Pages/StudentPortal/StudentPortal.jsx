@@ -1,11 +1,32 @@
+import EventCard from "@/Components/Shared/Cards/EventCard";
 import Container from "@/Components/Shared/Container/Container";
+import StatsBox from "@/Components/Shared/StatsBox/StatsBox";
 import Description from "@/Components/Shared/Text/Description";
 import Title from "@/Components/Shared/Text/Title";
-import imageAnime from "/public/portalanimation.png";
 import { statsData } from "@/lib/Data/StudentStatsData";
-import StatsBox from "@/Components/Shared/StatsBox/StatsBox";
+import { FaUser } from "react-icons/fa";
+import { FaCalendar } from "react-icons/fa6";
+import imageAnime from "/public/portalanimation.png";
 
 const StudentPortal = () => {
+  const upcomingEvents = [
+    {
+      id: 1,
+      icon: FaCalendar, // You can map this to the Calendar icon
+      title: "Google Analytics data",
+      time: "Module opens at 12:00 AM",
+      activities: "3 activities",
+      showJoinButton: false,
+    },
+    {
+      id: 2,
+      icon: FaUser, // You can map this to the User icon
+      title: "Q&A session with mentors",
+      time: "03:00 PM - 05:00 PM",
+      activities: null,
+      showJoinButton: true,
+    },
+  ];
   return (
     <Container>
       <div className="flex flex-col ">
@@ -23,7 +44,7 @@ const StudentPortal = () => {
             src={imageAnime}
           />
         </div>
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6  mt-7 ">
+        <div className="mt-7 grid grid-cols-1 gap-6 md:grid-cols-2  lg:grid-cols-3 ">
           {statsData.map((stat, index) => (
             <StatsBox
               key={index}
@@ -33,6 +54,15 @@ const StudentPortal = () => {
               bgColor={stat.bgColor}
             />
           ))}
+        </div>
+        <div className="mt-8 rounded-lg bg-white p-6 shadow">
+          <Title text="Upcoming Events" />
+
+          <ul className="mt-5 flex flex-col gap-2">
+            {upcomingEvents.map((event, idx) => (
+              <EventCard event={event} key={idx} />
+            ))}
+          </ul>
         </div>
       </div>
     </Container>

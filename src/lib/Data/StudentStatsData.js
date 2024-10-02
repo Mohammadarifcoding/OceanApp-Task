@@ -1,4 +1,4 @@
-import  { FaBook, FaClipboardList, FaClock, FaAward } from "react-icons/fa";
+import  { FaBook, FaClipboardList, FaClock } from "react-icons/fa";
 
 export const statsData = [
     {
