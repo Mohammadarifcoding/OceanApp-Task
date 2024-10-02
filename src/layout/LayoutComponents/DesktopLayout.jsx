@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import logo from "../../../assets/logo/newLogo.png";
+// import logo from "../../../assets/logo/newLogo.png";
 import LayoutBar from "./LayoutBar";
 import { DashboardData } from "../../lib/Data/DashboardNavData";
 
@@ -13,7 +13,7 @@ const DesktopLayout = () => {
       <div className="pl-7">
         <div>
           <Link to="/">
-            <img src={logo} className="mr-auto max-w-[200px]" alt="Logo" />
+            {/* <img src={logo} className="mr-auto max-w-[200px]" alt="Logo" /> */}
           </Link>
         </div>
         <div className="mt-4 flex flex-col">

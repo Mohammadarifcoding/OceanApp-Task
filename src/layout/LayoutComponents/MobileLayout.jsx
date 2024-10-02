@@ -1,13 +1,13 @@
 import { useState } from "react";
 import Drawer from "react-modern-drawer";
-import logo from "../../../assets/logo/newLogo.png";
+// import logo from "../../../assets/logo/newLogo.png";
 import "react-modern-drawer/dist/index.css";
 import { IoIosMenu } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 import LayoutBar from "./LayoutBar";
-import Button from "../Button/Button";
 import { DashboardData } from "../../lib/Data/DashboardNavData";
+import Button from "../../Components/Shared/Button/Button";
 
 const MobileLayout = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +42,7 @@ const MobileLayout = () => {
             <div className="pl-4">
               <div className=" ">
                 <Link to="/">
-                  <img src={logo} className="mr-auto max-w-[200px]" alt="" />
+                  {/* <img src={logo} className="mr-auto max-w-[200px]" alt="" /> */}
                 </Link>
               </div>
               <div className="mt-4 flex flex-col ">
