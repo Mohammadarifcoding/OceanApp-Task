@@ -4,6 +4,7 @@ import User from "../Components/Pages/User/User";
 import StudentPortal from "@/Components/Pages/StudentPortal/StudentPortal";
 import FacultyOverview from "@/Components/Pages/FacultyOverview/FacultyOverview";
 import EnrollCourse from "@/Components/Pages/EnrollCourse/EnrollCourse";
+import CourseDetails from "@/Components/Pages/CourseDetails/CourseDetails";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
       {
         path:"/enroll-in-course",
         element:<EnrollCourse/>
+      },
+      {
+        path:'/course-details/:id',
+        element:<CourseDetails/>
       }
     ],
   },

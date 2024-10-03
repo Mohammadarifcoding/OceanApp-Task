@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import cn from '../../../lib/Data/cn';
 
 const CourseCard = ({ content, className }) => {
-  const { id, image, name, course, deadline, students, actualPrice, discountedPrice } = content;
+  const {  image, name, course, deadline, students, actualPrice, discountedPrice } = content;
   return (
     <div
       className={cn(
@@ -50,7 +50,7 @@ const CourseCard = ({ content, className }) => {
               )}
             </div>
 
-            <Link to={`/course-details/${id}`}>
+            <Link to={`/course-details/${course}`}>
               <button className="text-sm font-bold text-primary">See Details</button>
             </Link>
           </div>
