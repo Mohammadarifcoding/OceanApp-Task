@@ -3,6 +3,7 @@ import {  FaTachometerAlt } from 'react-icons/fa';
 import { IoMdNotifications } from 'react-icons/io';
 import {  MdLibraryBooks } from 'react-icons/md';
 import {  PiUserFill } from 'react-icons/pi';
+import { FaChalkboardTeacher } from "react-icons/fa";
 import { PiStudentBold } from "react-icons/pi";
 export const DashboardData = [
   {
@@ -31,9 +32,9 @@ export const DashboardData = [
     routesData: [
       // student routes
       {
-        route: '/dashboard/profile',
-        title: 'User',
-        icon: PiUserFill
+        route: '/faculty-overview',
+        title: 'Faculty Management',
+        icon: FaChalkboardTeacher
       },
       {
         route: '/dashboard/notifications',

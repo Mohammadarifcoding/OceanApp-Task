@@ -39,7 +39,7 @@ const ProfileDetails = ({data}) => {
     <div>
       <div className="mt-10">
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-          <div className="grid grid-cols-1 gap-5 ">
+          <div className="grid grid-cols-2 gap-5 ">
             <div>
               <TextInput
                 register={register}
@@ -47,6 +47,7 @@ const ProfileDetails = ({data}) => {
                 name="firstName"
                 label="Enter First Name"
                 placeholder="First Name"
+                defaultValue={firstName}
               />
               {errors.firstName && (
                 <p className="text-xs text-red-600">
@@ -61,6 +62,7 @@ const ProfileDetails = ({data}) => {
                 name="lastName"
                 label="Enter Last Name"
                 placeholder="Last Name"
+                defaultValue={lastName}
               />
               {errors.lastName && (
                 <p className="text-xs text-red-600">
@@ -78,6 +80,7 @@ const ProfileDetails = ({data}) => {
                 type="email"
                 label="Enter your email"
                 placeholder="abc@gamil.com"
+               defaultValue={email}
               />
               {errors.email && (
                 <p className="text-xs text-red-600">{errors.email.message}</p>
@@ -85,17 +88,18 @@ const ProfileDetails = ({data}) => {
             </div>
             {/* input role ------- */}
             <div className="flex-1">
-              <TextInput
-                register={register}
-                name="role"
-                type="text"
-                label="Enter your role"
-                placeholder="student"
-              />
-              {errors.role && (
-                <p className="text-xs text-red-600">{errors.role.message}</p>
-              )}
-            </div>
+            <TextInput
+              register={register}
+              name="date"
+              type="date"
+              label="Date of birth"
+              className=" text-slate-400"
+              defaultValue={dateOfBirth}
+            />
+          </div>
+          {errors.date && (
+            <p className="text-xs text-red-600">{errors.date.message}</p>
+          )}
           </div>
           <div className="flex items-center justify-center gap-4">
             {/* input class ------- */}
@@ -106,6 +110,7 @@ const ProfileDetails = ({data}) => {
                 type="text"
                 label="Enter your class"
                 placeholder="inter first year"
+                defaultValue={studentClass}
               />
               {errors.class && (
                 <p className="text-xs text-red-600">{errors.class.message}</p>
@@ -119,6 +124,7 @@ const ProfileDetails = ({data}) => {
                 type="text"
                 label="Enter your group"
                 placeholder="group A"
+                defaultValue={group}
               />
               {errors.group && (
                 <p className="text-xs text-red-600">{errors.group.message}</p>
@@ -126,19 +132,7 @@ const ProfileDetails = ({data}) => {
             </div>
           </div>
           {/* date of birth */}
-          <div>
-            <TextInput
-              register={register}
-              name="date"
-              type="date"
-              label="Date of birth"
-              className=" text-slate-400"
-              // defaultValue={}
-            />
-          </div>
-          {errors.date && (
-            <p className="text-xs text-red-600">{errors.date.message}</p>
-          )}
+
 
           {/* phone no */}
           <div className="grid grid-cols-1 gap-4 lg:flex lg:items-center lg:justify-start">
@@ -160,8 +154,9 @@ const ProfileDetails = ({data}) => {
                 name="phone"
                 type="text"
                 label="Enter Your Phone Number"
-                placeholder={phoneNumber}
-                className="text-slate-400"
+                // placeholder={phoneNumber}
+                className=""
+                defaultValue={phoneNumber}
               />
               {errors.phone && (
                 <p className="text-xs text-red-600">{errors.phone.message}</p>
