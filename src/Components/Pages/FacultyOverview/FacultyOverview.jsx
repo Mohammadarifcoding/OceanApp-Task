@@ -1,37 +1,37 @@
 import { facultyData } from "@/lib/Data/FacultyData";
-import { Search } from "lucide-react";
+
 import { useState } from "react";
 import FacultyTable from "./FacultyTable";
 import Container from "@/Components/Shared/Container/Container";
 
 const FacultyOverview = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const filteredFaculty = facultyData.filter(
-    (faculty) =>
-      faculty.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      faculty.subject.toLowerCase().includes(searchTerm.toLowerCase()),
-  );
+
+  const [data,setData] = useState([...facultyData])
+  const SearchData = (search)=>{
+    if(!search){
+      setData([...facultyData])
+    }
+    const filteredFaculty = facultyData.filter(
+      (faculty) =>
+        faculty.name.toLowerCase().includes(search.toLowerCase()) ||
+        faculty.subject.toLowerCase().includes(search.toLowerCase()),
+    );
+    setData([...filteredFaculty])
+  }
   return (
     <Container >
-        {/* Faculty Overview */}
       <div className="flex items-center justify-between mb-10">
         <h2 className="text-2xl font-bold">Faculty Overview</h2>
         <div className="flex items-center space-x-2">
           <input
             type="text"
             placeholder="Search faculty..."
-            className="rounded-md border px-3 py-2"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            className="rounded-md border focus:outline-none px-3 py-2"
+            onChange={(e) => SearchData(e.target.value)}
           />
-          <button className="rounded-md bg-blue-500 p-2 text-white">
-            <Search className="h-5 w-5" />
-            <span className="sr-only">Search</span>
-          </button>
         </div>
       </div>
-      {/* Faculty Table */}
-      <FacultyTable facultyData={facultyData}/>
+      <FacultyTable facultyData={data}/>
     </Container>
   );
 };

@@ -1,10 +1,10 @@
 
 import {  FaTachometerAlt } from 'react-icons/fa';
 import { IoMdNotifications } from 'react-icons/io';
-import {  MdLibraryBooks } from 'react-icons/md';
 import {  PiUserFill } from 'react-icons/pi';
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { PiStudentBold } from "react-icons/pi";
+import { FaBookOpenReader } from 'react-icons/fa6';
 export const DashboardData = [
   {
     title: 'General',
@@ -42,9 +42,9 @@ export const DashboardData = [
         icon: IoMdNotifications
       },
       {
-        route: '/dashboard/my-courses',
-        title: 'My Courses',
-        icon: MdLibraryBooks
+        route: '/enroll-in-course',
+        title: 'Enroll in Course',
+        icon: FaBookOpenReader
       }
     ]
   }

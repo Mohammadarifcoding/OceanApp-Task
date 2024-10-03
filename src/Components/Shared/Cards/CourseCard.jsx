@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import cn from '../../../lib/Data/cn';
 
 const CourseCard = ({ content, className }) => {
-  const { id, image, name, category, course, deadline, students, actualPrice, discountedPrice } = content;
+  const { id, image, name, course, deadline, students, actualPrice, discountedPrice } = content;
   return (
     <div
       className={cn(
@@ -15,11 +15,6 @@ const CourseCard = ({ content, className }) => {
     >
       {/* Card Image */}
       <img src={image} className="h-64 w-full max-w-[350px] rounded-t-lg md:max-w-[100%]" alt={course} />
-
-      {/* Card Category (Absolute Position) */}
-      <div className="absolute left-4 top-4">
-        <p className="rounded-lg bg-gray-700 px-3 py-2 text-center text-xs text-gray-200">{category}</p>
-      </div>
 
       {/* Card Content */}
       <div className="flex flex-col gap-3 p-4">
@@ -47,18 +42,16 @@ const CourseCard = ({ content, className }) => {
               {/* Display Prices */}
               {discountedPrice ? (
                 <>
-                  <p className="text-sm font-semibold text-gray-500 line-through dark:text-gray-400">{actualPrice} টাকা</p>
-                  <p className="text-sm font-semibold text-green-500">{discountedPrice} টাকা</p>
+                  <p className="text-sm font-semibold text-gray-500 line-through dark:text-gray-400">{actualPrice} Taka</p>
+                  <p className="text-sm font-semibold text-green-500">{discountedPrice} Taka</p>
                 </>
               ) : (
-                <p className="text-sm font-semibold text-gray-500 dark:text-white">{actualPrice} টাকা</p>
+                <p className="text-sm font-semibold text-gray-500 dark:text-white">{actualPrice} Taka</p>
               )}
             </div>
 
             <Link to={`/course-details/${id}`}>
-              {/*  <Link to={`/course-details/${id}`}> */}
-              {/* to={`/course-details/${course.toLowerCase()}`} */}
-              <button className="text-sm font-bold text-primary">বিস্তারিত দেখুন</button>
+              <button className="text-sm font-bold text-primary">See Details</button>
             </Link>
           </div>
         </div>

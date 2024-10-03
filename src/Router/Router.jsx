@@ -3,6 +3,7 @@ import DashboardLayout from "../layout/DashboardLayout";
 import User from "../Components/Pages/User/User";
 import StudentPortal from "@/Components/Pages/StudentPortal/StudentPortal";
 import FacultyOverview from "@/Components/Pages/FacultyOverview/FacultyOverview";
+import EnrollCourse from "@/Components/Pages/EnrollCourse/EnrollCourse";
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
         path: "/faculty-overview",
         element: <FacultyOverview />,
       },
+      {
+        path:"/enroll-in-course",
+        element:<EnrollCourse/>
+      }
     ],
   },
 ]);
