@@ -37,7 +37,7 @@ export const DashboardData = [
         icon: FaChalkboardTeacher
       },
       {
-        route: '/dashboard/notifications',
+        route: '/notification',
         title: 'Notifications',
         icon: IoMdNotifications
       },

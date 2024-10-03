@@ -5,6 +5,7 @@ import StudentPortal from "@/Components/Pages/StudentPortal/StudentPortal";
 import FacultyOverview from "@/Components/Pages/FacultyOverview/FacultyOverview";
 import EnrollCourse from "@/Components/Pages/EnrollCourse/EnrollCourse";
 import CourseDetails from "@/Components/Pages/CourseDetails/CourseDetails";
+import Notifications from "@/Components/Pages/Notifications/Notifications";
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
       {
         path:'/course-details/:id',
         element:<CourseDetails/>
+      },
+      {
+        path:"/notification",
+        element:<Notifications/>
       }
     ],
   },

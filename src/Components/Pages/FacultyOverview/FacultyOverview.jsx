@@ -3,6 +3,7 @@ import { facultyData } from "@/lib/Data/FacultyData";
 import { useState } from "react";
 import FacultyTable from "./FacultyTable";
 import Container from "@/Components/Shared/Container/Container";
+import Title from "@/Components/Shared/Text/Title";
 
 const FacultyOverview = () => {
 
@@ -21,7 +22,7 @@ const FacultyOverview = () => {
   return (
     <Container >
       <div className="flex items-center justify-between mb-10">
-        <h2 className="text-2xl font-bold">Faculty Overview</h2>
+        <Title text="Faculty Overview"></Title>
         <div className="flex items-center space-x-2">
           <input
             type="text"
