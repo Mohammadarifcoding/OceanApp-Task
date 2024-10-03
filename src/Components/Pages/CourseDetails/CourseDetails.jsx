@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { Book, FileText, Camera } from "lucide-react";
 import Container from "@/Components/Shared/Container/Container";
 import { FaCalendar, FaCamera, FaClock, FaUsers } from "react-icons/fa";
+import CourseBuyModal from "./CourseBuyModal";
 
 const CourseDetails = () => {
   const { id } = useParams();
@@ -12,6 +13,8 @@ const CourseDetails = () => {
     const FindData = CourseData.find((c) => c.course == id);
     setCourse(FindData);
   }, [id]);
+
+  const [openModal,setOpenModal] = useState(true)
 
   return (
     <Container>
@@ -135,7 +138,7 @@ const CourseDetails = () => {
           </section>
 
           <div className="mb-10 flex items-center justify-center sm:justify-end">
-            <button className="flex items-center justify-center rounded-md bg-blue-500 px-6 py-2 text-white transition duration-300 ease-in-out hover:bg-blue-600">
+            <button onClick={()=>{setOpenModal(true)}} className="flex items-center justify-center rounded-md bg-blue-500 px-6 py-2 text-white transition duration-300 ease-in-out hover:bg-blue-600">
               <Book className="mr-2 h-5 w-5" />
               Enroll Now
             </button>
@@ -144,6 +147,7 @@ const CourseDetails = () => {
       ) : (
         ""
       )}
+      <CourseBuyModal openModal={openModal} setOpenModal={setOpenModal}/>
     </Container>
   );
 };
