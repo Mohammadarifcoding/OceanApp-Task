@@ -17,7 +17,7 @@ export const router = createBrowserRouter([
         element: <User />,
       },
       {
-        path: "/student-portal",
+        path: "/",
         element: <StudentPortal />,
       },
       {

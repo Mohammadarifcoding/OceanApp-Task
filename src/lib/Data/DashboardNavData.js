@@ -1,5 +1,5 @@
 
-import {  FaTachometerAlt } from 'react-icons/fa';
+
 import { IoMdNotifications } from 'react-icons/io';
 import {  PiUserFill } from 'react-icons/pi';
 import { FaChalkboardTeacher } from "react-icons/fa";
@@ -9,13 +9,13 @@ export const DashboardData = [
   {
     title: 'General',
     routesData: [
+      // {
+      //   route: '/dashboard',
+      //   title: 'Dashboard',
+      //   icon: FaTachometerAlt
+      // },
       {
-        route: '/dashboard',
-        title: 'Dashboard',
-        icon: FaTachometerAlt
-      },
-      {
-        route: '/student-portal',
+        route: '/',
         title: 'Student Portal',
         icon:  PiStudentBold,
 
