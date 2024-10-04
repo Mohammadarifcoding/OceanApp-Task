@@ -22,7 +22,9 @@ const Notifications = () => {
   return (
     <Container>
       <Title text="Notifications" />
-      <div className="overflow-hidden rounded-lg  shadow-md mt-10 ">
+      {
+        data.length > 0 ?<>
+        <div className="overflow-hidden rounded-lg  shadow-md mt-10 ">
         {data.map((notification,idx) => (
           <NotificationCard notification={notification} key={idx} setData={setData} data={data}/>
         ))}
@@ -35,6 +37,11 @@ const Notifications = () => {
           Clear all notifications
         </Button>
       </div>
+        </> : <div className="py-20 flex justify-center">
+                <h3 className="text-xl ">No notifications found</h3>
+        </div>
+      }
+      
     </Container>
   );
 };

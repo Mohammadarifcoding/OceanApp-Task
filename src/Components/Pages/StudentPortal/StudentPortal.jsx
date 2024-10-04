@@ -1,9 +1,12 @@
 import EventCard from "@/Components/Shared/Cards/EventCard";
+import RecentActivityCard from "@/Components/Shared/Cards/RecentActivityCard";
 import Container from "@/Components/Shared/Container/Container";
 import StatsBox from "@/Components/Shared/StatsBox/StatsBox";
 import Description from "@/Components/Shared/Text/Description";
 import Title from "@/Components/Shared/Text/Title";
+import { RecentActivityData } from "@/lib/Data/RecentActivity";
 import { statsData } from "@/lib/Data/StudentStatsData";
+
 import { FaUser } from "react-icons/fa";
 import { FaCalendar } from "react-icons/fa6";
 import imageAnime from "/public/portalanimation.png";
@@ -27,6 +30,8 @@ const StudentPortal = () => {
       showJoinButton: true,
     },
   ];
+
+
   return (
     <Container>
       <div className="flex flex-col ">
@@ -64,6 +69,17 @@ const StudentPortal = () => {
             ))}
           </ul>
         </div>
+        <div className="mt-8 rounded-xl bg-white p-6 shadow-md">
+          <h2 className="mb-6 text-2xl font-semibold text-gray-800">
+            Recent Activity
+          </h2>
+          <div className="space-y-6">
+            {RecentActivityData.map((activity, index) => (
+              <RecentActivityCard activity={activity} key={index} />
+            ))}
+          </div>
+        </div>
+
       </div>
     </Container>
   );
